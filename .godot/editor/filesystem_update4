@@ -1,3 +1,6 @@
 res://plane_cb/plane_cb.tscn
 res://game.tscn
 res://plane_cb/plane_cb.gd
+res://laser/laser.tscn
+res://pipe/pipe.tscn
+res://pipes/pipes.tscn
