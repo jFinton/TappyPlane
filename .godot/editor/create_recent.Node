@@ -1,4 +1,6 @@
 Timer
+Label
+TextureRect
 Marker2D
 Node
 VisibleOnScreenNotifier2D

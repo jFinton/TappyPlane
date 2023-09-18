@@ -5,3 +5,10 @@ res://game.tscn
 res://plane_cb/plane_cb.tscn
 res://pipe/pipe.tscn
 res://game.gd
+res://main/main.tscn
+res://singletons/game_manager.gd
+res://main/main.gd
+res://plane_cb/plane_cb.gd
+res://game_over/game_over.tscn
+res://assets/fonts/LG_48_Yellow.tres
+res://game_over/game_over.gd
