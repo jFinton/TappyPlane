@@ -1,10 +1,43 @@
 extends Node
 
 
+signal on_game_over #emitted from plane_cb.die
+signal on_score_updated #emitted from GameManager.set_score
+
+
+const GROUP_PLANE: String = "plane"
+
+
 var game_scene: PackedScene = preload("res://game.tscn")
 var main_scene: PackedScene = preload("res://main/main.tscn")
 
 
+var _score: int = 0
+var _high_score: int = 0
+
+
+# SCORE_MANAGEING
+func get_score() -> int:
+	return _score
+
+
+func get_high_score() -> int:
+	return _high_score
+
+
+func set_score(new_score: int) -> void:
+	_score = new_score
+	if _score > _high_score:
+		_high_score = _score
+	on_score_updated.emit()
+	#print("sc:%s hs:%s" % [_score, _high_score])
+
+
+func increment_score() -> void:
+	set_score(_score + 1)
+
+
+# SCENE LOADING
 func load_game_scene() -> void:
 	get_tree().change_scene_to_packed(game_scene)
 

@@ -23,6 +23,7 @@ GameManager="*res://singletons/game_manager.gd"
 
 window/size/viewport_width=480
 window/size/viewport_height=854
+window/stretch/mode="canvas_items"
 window/handheld/orientation=1
 
 [input]
